@@ -1,0 +1,12 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: do-stuff
+    runs-on: ubuntu-latest
+    steps:
+        - name: DoSomthing
+          run: echo $PATH
