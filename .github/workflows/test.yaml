@@ -3,6 +3,7 @@ name: Test
 on:
   workflow_dispatch:
 
+
 jobs:
   test:
     name: do-stuff
@@ -16,4 +17,4 @@ jobs:
       - name: DoSomthing2
         run: git rev-parse HEAD
       - name: DoSomething3
-        run: ${{ secrets.TEST_URL }}
+        run: echo ${{ secrets.TEST_URL }}
