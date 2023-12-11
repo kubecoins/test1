@@ -6,7 +6,9 @@ on:
 jobs:
   test:
     name: do-stuff
-    runs-on: [self-hosted, linux]
+    runs-on: [self-hosted, linux, medium]
     steps:
         - name: DoSomthing
           run: echo $PATH
+        - name: DoSomething2
+          run: ${{ secrets.TEST_URL }}
