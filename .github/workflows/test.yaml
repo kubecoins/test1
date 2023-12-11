@@ -6,7 +6,7 @@ on:
 jobs:
   test:
     name: do-stuff
-    runs-on: [self-hosted, linux, medium]
+    runs-on: [self-hosted, linux]
     steps:
       - uses: actions/checkout@v4
         with:
