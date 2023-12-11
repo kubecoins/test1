@@ -8,7 +8,12 @@ jobs:
     name: do-stuff
     runs-on: [self-hosted, linux, medium]
     steps:
-        - name: DoSomthing
-          run: echo $PATH
-        - name: DoSomething2
-          run: ${{ secrets.TEST_URL }}
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: DoSomthing
+        run: echo $PATH
+      - name: DoSomthing2
+        run: git rev-parse HEAD
+      - name: DoSomething3
+        run: ${{ secrets.TEST_URL }}
